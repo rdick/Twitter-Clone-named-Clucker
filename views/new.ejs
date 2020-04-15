@@ -1,0 +1,26 @@
+<%- include("./partials/header.ejs") %> <%if(loggedInUserName != "") { %>
+<div class="container">
+  <div class="card" style="margin-top: 3vh;">
+    <div class="form-group" style="padding: 20px;">
+      <form action="/cluck" method="POST">
+        <h3>Content</h3>
+        <input type="text" name="content" id="content" class="form-control" />
+        <br />
+        <h3>Image URL</h3>
+        <input
+          type="text"
+          name="image_url"
+          id="image_url"
+          class="form-control"
+        />
+        <br />
+        <button type="submit" class="btn btn-primary btn-block">
+          <strong>CLUCK!</strong>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<%} else { %>
+<h1>Please Log In</h1>
+<%} %>

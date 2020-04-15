@@ -1,0 +1,27 @@
+<%- include("./partials/header.ejs") %>
+<div class="container">
+  <% if(loggedInUserName != "") {%> <% clucks.forEach( cluck => { %>
+  <div class="card" style="margin-top: 3vh;">
+    <div class="d-flex">
+      <div style="margin: 25px 20px 20px 20px;">
+        <img src="<%= cluck.image_url %>" style="width: 40px;" />
+      </div>
+      <div
+        class="card"
+        style="border: none; margin-right: 20px; margin-bottom: 20px;"
+      >
+        <div class="card-body">
+          <h4 class="card-title">
+            <%= cluck.username %> ****** <%= cluck.created_at %>
+          </h4>
+          <p class="card-text"><%= cluck.content %></p>
+        </div>
+        <img src="<%= cluck.image_url %>" class="card-img-botom" />
+      </div>
+    </div>
+  </div>
+
+  <% }) %> <% } else { %>
+  <h1>please sign in</h1>
+  <% }%>
+</div>

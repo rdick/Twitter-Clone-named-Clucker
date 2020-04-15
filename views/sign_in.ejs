@@ -1,0 +1,19 @@
+<%- include("./partials/header.ejs") %>
+
+<div class="container" style="margin-top: 3vh;">
+  <h1>Sign In</h1>
+  <div class="card" style="padding: 20px;">
+    <div class="form-group">
+      <h3>Username</h3>
+      <form action="/cluck/sign_in" method="POST">
+        <input type="text" name="username" id="username" class="form-control" />
+        <br />
+        <div>
+          <button type="submit" class="btn btn-primary btn-block">
+            <strong>SIGN IN</strong>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
